@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/opendyslexic@5.0.1/index.css');
+@import "tailwindcss";
+
+:root {
+  --font-app-sans: "Arial", "Helvetica Neue", Helvetica, sans-serif;
+  --font-app-display: "Verdana", Geneva, sans-serif;
+  --font-app-mono: "Courier New", Courier, monospace;
+  
+  --color-app-brand: #FF7A18;
+  --color-app-brand-hover: #E05E00;
+  --color-app-brand-light: #FFF5F0;
+  --color-app-bg: #FCFAF7;
+  --color-app-text: #000000;
+  --color-app-border: #E5E7EB;
+  --color-app-card: #FFFFFF;
+}
+
+@theme {
+  --font-sans: var(--font-app-sans);
+  --font-display: var(--font-app-display);
+  --font-mono: var(--font-app-mono);
+  
+  --color-brand: var(--color-app-brand);
+  --color-brand-hover: var(--color-app-brand-hover);
+  --color-brand-light: var(--color-app-brand-light);
+  --color-cream: var(--color-app-bg);
+}
+
+body {
+  font-family: var(--font-app-sans);
+  background-color: var(--color-app-bg) !important;
+  color: var(--color-app-text) !important;
+  transition: background-color 0.2s ease, color 0.2s ease, font-family 0.2s ease;
+}
+
+/* ==========================================================================
+   GLOBAL THEMATIC OVERRIDES FOR COMPREHENSIVE APP-WIDE ACCESSIBILITY
+   ========================================================================== */
+
+/* Outer Canvas Elements (Main Backdrops and Stages) */
+body, 
+.bg-\[\#FCFAF7\], 
+.bg-\[\#FAF9F6\], 
+#dashboard-stage, 
+#welcome-stage,
+#language-stage,
+#struggles-stage,
+#mode1-reading, 
+#mode2-conversation, 
+#mode3-freespeech {
+  background-color: var(--color-app-bg) !important;
+  color: var(--color-app-text) !important;
+}
+
+/* Rounded Cards and bento panels */
+.bg-white {
+  background-color: var(--color-app-card, #FFFFFF) !important;
+}
+
+/* Input boxes, textareas and subpanels */
+.bg-gray-50, 
+.bg-orange-50\/40, 
+.bg-red-50\/40, 
+.bg-yellow-50\/40 {
+  background-color: var(--color-app-brand-light, #FFF5F0) !important;
+}
+
+/* Active brand color container backgrounds (like avatar accent badges) */
+.bg-orange-50,
+.bg-orange-100 {
+  background-color: var(--color-app-brand-light) !important;
+}
+
+/* Accent element outlines and custom lines */
+.border-gray-200, 
+.border-gray-150, 
+.border-gray-100, 
+.border-gray-300, 
+.border-orange-100,
+.border-orange-150,
+.border-red-100\/50,
+.border-yellow-105 {
+  border-color: var(--color-app-border, #E5E7EB) !important;
+}
+
+/* Direct Text Element Overrides to enforce Dark Slate / Green / Blue / Chocolate */
+.text-black, 
+.text-gray-900, 
+.text-gray-800, 
+.text-gray-750, 
+.text-gray-700, 
+.text-\[\#2D2D2D\], 
+p.text-black, 
+h1.text-black, 
+h2.text-black, 
+h3.text-black, 
+h4.text-black, 
+span.text-black {
+  color: var(--color-app-text) !important;
+}
+
+/* Secondary descriptions, indicators, labels and caption text */
+.text-gray-600, 
+.text-gray-550, 
+.text-gray-500, 
+.text-gray-450, 
+.text-gray-400 {
+  color: var(--color-app-text) !important;
+  opacity: 0.75 !important;
+}
+
+/* Extremely faded subcaptions or placeholders */
+.text-gray-300 {
+  color: var(--color-app-text) !important;
+  opacity: 0.45 !important;
+}
+
+/* Brand colored Text Elements */
+.text-brand,
+.text-\[\#FF7A18\],
+.text-orange-700 {
+  color: var(--color-app-brand) !important;
+}
+
+/* Brand backgrounds and icons */
+.bg-brand,
+.bg-\[\#FF7A18\],
+.bg-orange-600 {
+  background-color: var(--color-app-brand) !important;
+}
+
+/* Brand borders */
+.border-brand,
+.border-\[\#FF7A18\],
+.border-\[\#FF7A18\]\/20,
+.border-\[\#FF7A18\]\/30 {
+  border-color: var(--color-app-brand) !important;
+}
+
+/* Custom interactive effects */
+.hover\:bg-orange-50:hover {
+  background-color: var(--color-app-brand-light) !important;
+}
+
+.hover\:border-\[\#FF7A18\]\/40:hover {
+  border-color: var(--color-app-brand) !important;
+}
+
+.focus\:ring-\[\#FF7A18\]:focus {
+  outline-color: var(--color-app-brand) !important;
+}
+
+.group:hover .group-hover\:text-\[\#FF7A18\] {
+  color: var(--color-app-brand) !important;
+}
+
+.group:hover .group-hover\:border-\[\#FF7A18\]\/40 {
+  border-color: var(--color-app-brand) !important;
+}
+
+/* Dynamic transparent color tints */
+.bg-\[\#FF7A18\]\/5 {
+  background-color: color-mix(in srgb, var(--color-app-brand) 5%, transparent) !important;
+}
+
+.bg-\[\#FF7A18\]\/10 {
+  background-color: color-mix(in srgb, var(--color-app-brand) 10%, transparent) !important;
+}
+
+.shadow-\[\#FF7A18\]\/30 {
+  box-shadow: 0 10px 15px -3px color-mix(in srgb, var(--color-app-brand) 30%, transparent), 0 4px 6px -4px color-mix(in srgb, var(--color-app-brand) 30%, transparent) !important;
+}
+
+/* Custom pulse animation for recording */
+@keyframes microphone-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-app-brand) 40%, transparent);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 15px color-mix(in srgb, var(--color-app-brand) 0%, transparent);
+  }
+}
+
+.animate-mic-pulse {
+  animation: microphone-pulse 2s infinite ease-in-out;
+}
