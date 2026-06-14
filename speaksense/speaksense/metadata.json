@@ -1,6 +1,0 @@
-{
-  "name": "Speech Coach",
-  "description": "An ultra-minimalist AI-powered speech coaching application with real-time feedback, transcription analysis, and customized practice modes.",
-  "requestFramePermissions": ["microphone"],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
